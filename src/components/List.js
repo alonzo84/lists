@@ -32,6 +32,7 @@ class ListPage extends Component {
             }
         ];
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleBackClick = this.handleBackClick.bind(this);
     }
 
     handleDelete(exampleId) {
@@ -40,10 +41,14 @@ class ListPage extends Component {
         this.setState(this.state.examples);
     }
 
+    handleBackClick(){
+        this.props.history.push('/login');
+    }
+
     render() {
         return (
             <>
-                <div>{`<`} List View</div>
+                <div><span onClick={this.handleBackClick}>{`<`}</span> List View</div>
                 {this.state.examples.map((example) =>
                     <div>
                         <ListItem
