@@ -47,7 +47,7 @@ class ListPage extends Component {
 
     render() {
         return (
-            <>
+            <div className="container-div">
                 <div><span onClick={this.handleBackClick}>{`<`}</span> List View</div>
                 {this.state.examples.map((example) =>
                     <div>
@@ -59,7 +59,7 @@ class ListPage extends Component {
                         />
                     </div>
                 )}
-            </>
+            </div>
         )
     }
 }

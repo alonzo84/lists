@@ -29,7 +29,7 @@ class LoginPage extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container-div">
                 <div>Welcome</div>
                 <div><input type="text" placeholder="Username"></input></div>
                 <div><input onChange={this.handleChange} type="password" placeholder="Password"></input></div>
